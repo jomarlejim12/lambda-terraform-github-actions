@@ -22,13 +22,13 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: "AKIAYU4G6MZI2J2XF6MH"
-        aws-secret-access-key: "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"
+        aws-secret-access-key: "3wSPZC9XymNMwNK/pY1gAWDY5qIBTUducLWpAcEC"
         aws-region: ${{ env.AWS_REGION }}
 
     - name: Define variables
       run: |
-        export AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
-        export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        export AWS_ACCESS_KEY_ID=AKIAYU4G6MZI2J2XF6MH
+        export AWS_SECRET_ACCESS_KEY=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
         
     - name: Publish on prod
       if: github.ref == 'refs/heads/master'
